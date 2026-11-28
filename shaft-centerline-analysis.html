@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Shaft Centerline Analysis (DC Position) | ShaftVision</title>
-<meta name="description" content="Average shaft centerline position in fluid-film bearings using X-Y proximity-probe DC readings, a confirmed rest reference and bearing clearance.">
+<title>Average Shaft Centerline Analysis | DC Position | ShaftVision</title>
+<meta name="description" content="Learn Average Shaft Centerline Analysis using X-Y proximity-probe DC readings, confirmed rest-reference voltages, probe geometry and journal-bearing clearance.">
 <meta name="robots" content="index,follow"><link rel="canonical" href="https://shaftvision-website.onrender.com/shaft-centerline-analysis.html">
 <meta property="og:type" content="article"><meta property="og:title" content="Shaft Centerline Analysis | ShaftVision"><meta property="og:description" content="A practical guide to average shaft centerline position from proximity-probe DC readings.">
 <meta name="theme-color" content="#071426">
@@ -22,8 +22,8 @@
 </head><body>
 <header><div class="wrap"><a class="brand" href="/">SHAFT<span>VISION</span></a><nav><a href="/">Home</a><a href="/shaftvision-software.html">Software</a><a href="/dc-position-analysis.html">DC Position Analysis</a><a href="/shaft-position-monitoring.html">Shaft Position</a><a href="/gas-compressor-vibration-analysis.html">Gas Compressor Diagnostics</a></nav></div></header>
 <main class="wrap"><div class="eyebrow">Rotating machinery · Fluid-film bearings</div>
-<h1>Shaft Centerline Analysis</h1>
-<p class="lead">Average Shaft Centerline analysis describes where a rotor's mean radial position sits within its bearing clearance. ShaftVision is a focused engineering tool for assessing this position from X and Y proximity-probe DC readings, a confirmed reference/rest condition and bearing-clearance information.</p>
+<h1>Average Shaft Centerline Analysis</h1>
+<p class="lead">Average Shaft Centerline Analysis describes the rotor’s mean radial position within a fluid-film journal bearing. This technical guide explains how X-Y eddy-current proximity-probe DC readings, the confirmed mechanical rest reference, installed probe angles and bearing-clearance geometry are used to assess shaft position. <a href="/shaftvision-software.html">Explore ShaftVision software for reference-based DC Position analysis</a>.</p>
 <div class="panel"><strong>Important measurement distinction</strong><p>The average shaft centerline is derived from the DC component of proximity-probe signals. AC dynamic vibration and orbit analysis use different signal information. ShaftVision Core Fault Diagnostics evaluates DC Position; it is not an orbit analyzer and does not process AC waveform or full-spectrum files.</p></div>
 <h2>What does a shaft centerline plot tell an engineer?</h2>
 <p>In a fluid-film journal bearing, the rotor does not normally operate exactly at the geometric centre of the bearing. Its average position is influenced by the machine's operating condition, bearing geometry, load and rotor-system characteristics. A shaft centerline view helps an engineer understand the radial location of that average position relative to a defined reference and the available bearing clearance.</p>
@@ -35,6 +35,14 @@
 </ul>
 <h2>How ShaftVision approaches DC position</h2>
 <p>ShaftVision provides a structured workflow for recording the reference condition, entering operating DC readings, calculating average shaft-centerline position from the probe geometry, and reviewing the result in relation to bearing clearance. The purpose is to make the position assessment clear and traceable—not to substitute dynamic vibration analysis or a complete machinery diagnostic investigation.</p>
+<h2>Practical workflow for average shaft centerline analysis</h2>
+<ol>
+<li><strong>Confirm the reference.</strong> Record the actual X and Y DC readings at the defined mechanical rest condition; do not substitute an assumed bearing-centre position.</li>
+<li><strong>Verify probe configuration.</strong> Check each probe’s installed angle, calibration polarity and applicable sensitivity before converting voltage changes to displacement.</li>
+<li><strong>Enter operating readings.</strong> Compare running DC readings with the corresponding reference readings using the same channel definitions.</li>
+<li><strong>Apply bearing geometry.</strong> Interpret the calculated radial position using the entered clearance dimensions and the appropriate circular or elliptical model.</li>
+<li><strong>Review within scope.</strong> Treat the result as a DC average-position assessment; use AC vibration, spectra, waveforms and process evidence separately when investigating dynamic faults.</li>
+</ol>
 <h2>Reading shaft position against bearing clearance</h2>
 <p>The calculated average shaft position should be interpreted from the entered mechanical reference and the actual bearing-clearance geometry. The bearing centre is not automatically the measurement origin, and the rest/reference position should remain visible as the baseline for the assessment.</p>
 <p>Clearance shape matters. A circular clearance model and an elliptical clearance model are different geometric assumptions; the model selected for an assessment should match the bearing information available. The radial position and its relationship to the applicable clearance boundary should be reviewed together, rather than relying on a single probe voltage or an unreferenced displacement value.</p>
@@ -42,7 +50,7 @@
 <h3>Is shaft centerline analysis the same as an orbit plot?</h3><p>No. Average shaft centerline analysis uses the DC component of proximity-probe signals to assess mean shaft position. An orbit plot represents dynamic shaft motion using AC vibration information.</p>
 <h3>Does the rest position have to be at the bearing centre?</h3><p>No. The recorded mechanical rest/reference condition is the baseline. It should not be silently replaced with the bearing centre or another assumed coordinate.</p>
 <h3>Why does bearing-clearance geometry matter?</h3><p>The clearance boundary provides the geometric context for interpreting the calculated shaft position. The selected circular or elliptical representation should reflect the actual bearing data used in the assessment.</p>
-<p>For practical guidance, see <a href="/shaft-centerline-interpretation.html">How to Interpret Average Shaft Centerline Position</a>.</p><h2>Related engineering topics</h2><ul>
+<p>For practical guidance, see <a href="/shaft-centerline-interpretation.html">How to Interpret Average Shaft Centerline Position</a>. To see how the measurement workflow is implemented, visit the <a href="/shaftvision-software.html">ShaftVision Average Shaft Centerline software page</a> or review the <a href="/dc-position-analysis.html">DC Position analysis guide</a>.</p><h2>Related engineering topics</h2><ul>
 <li><a href="/dc-position-analysis.html">DC position analysis from proximity-probe signals</a></li>
 <li><a href="/shaft-position-monitoring.html">Shaft position monitoring in rotating machinery</a></li><li><a href="/journal-bearing-oil-film.html">Journal Bearing Oil Film and Shaft Position</a></li><li><a href="/proximity-probe-technology.html">Eddy-Current Proximity Probe Technology</a></li>
 <li><a href="/ruston-ta1750-field-balancing.html">Ruston TA-1750 field-balancing case study</a></li>
